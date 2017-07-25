@@ -3,7 +3,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var minifycss = require('gulp-minify-css');
 var cleanCSS = require('gulp-clean-css');
-var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -20,8 +19,7 @@ gulp.task('css', function ()
         .pipe(sass())
         .pipe(minifycss())
         .pipe(autoprefixer({ browsers: ['last 3 versions'] }))
-        .pipe(gulp.dest('css'))
-        .pipe(notify({message: 'SCSS Compiled!'}));
+        .pipe(gulp.dest('css-dist'));
 });
 
 gulp.task('watch', function ()

@@ -17,3 +17,7 @@ dependencies:
 test:
   override:
     - node_modules/.bin/gulp css
+
+general:
+  artifacts:
+    - "css-dist"
