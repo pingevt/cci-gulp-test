@@ -10,10 +10,10 @@ dependencies:
   cache_directories:
     - node_modules
   override:
-    - yarn install
-    - node_modules/.bin/gulp install
     - npm install
+    - yarn install
+    - node_modules/.bin/gulp css
 
 test:
   override:
-    - gulp css
+    - node_modules/.bin/gulp css
