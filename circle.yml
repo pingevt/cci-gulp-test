@@ -11,7 +11,7 @@ dependencies:
     - node_modules
   override:
     - yarn install
-    - gulp install
+    - node_modules/.bin/gulp install
     - npm install
 
 test:
